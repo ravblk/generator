@@ -10,9 +10,9 @@ project:
 	mkdir -p $(app)
 	cd $(app) && go mod init $(PROJECT)
 
-	go get -u github.com/spf13/cobra/cobra
+	go get -u github.com/spf13/cobra@latest
 	cd $(app) &&\
-	cobra init --pkg-name $(PROJECT) &&\
+	cobra init &&\
 	cobra add serve &&\
 	mkdir -p cmd/$(app) &&\
 	mv main.go cmd/$(app) 
